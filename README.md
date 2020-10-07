@@ -1,2 +1,3 @@
-# ITNote
-Aplikasi Pencatatan Department Teknologi Informasi
+# Tartila Development
+
+> Drag Drop Like Trello

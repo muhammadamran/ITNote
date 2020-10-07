@@ -1,0 +1,143 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.drag-container {
+  max-width: 1000px;
+  margin: 20px auto;
+}
+
+.drag-list {
+  display: flex;
+  align-items: flex-start;
+}
+@media (max-width: 690px) {
+  .drag-list {
+    display: block;
+  }
+}
+
+.drag-column {
+  flex: 1;
+  margin: 0 10px;
+  position: relative;
+  background: rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  border-radius: 10px;
+}
+@media (max-width: 690px) {
+  .drag-column {
+    margin-bottom: 30px;
+  }
+}
+.drag-column h2 {
+  font-size: 16px;
+  padding: 5px 10px;
+  margin: 0 auto;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.drag-column-on-hold .drag-column-header,
+.drag-column-on-hold .is-moved,
+.drag-column-on-hold .drag-options {
+  background: #FB7D44;
+}
+.drag-column-in-progress .drag-column-header,
+.drag-column-in-progress .is-moved,
+.drag-column-in-progress .drag-options {
+  background: #2A92BF;
+}
+.drag-column-approved .drag-column-header,
+.drag-column-approved .is-moved,
+.drag-column-approved .drag-options {
+  background: #00B961;
+}
+
+.drag-column-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.drag-inner-list {
+  min-height: 50px;
+}
+
+.drag-item {
+  margin: 10px;
+  height: auto;
+  padding: 10px;
+  text-align: left;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.4);
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.drag-item > .title {
+	margin-bottom: 10px;
+}
+.drag-item > .created_by {
+	font-size:10px;
+}
+.drag-item > .created_by > span {
+	font-weight: 600
+}
+.drag-item > .date {
+	font-size:10px;
+	margin-bottom: 10px;
+}
+.drag-item > .date > span {
+	font-weight: 600
+}
+.drag-item > .button {
+	width: 100%;
+	display: block;
+	font-size:12px;
+	font-weight: 600;
+	color: rgba(0, 0, 0, 0.7);
+	border: 1px solid #fff;
+	border-radius: 5px;
+	background-color: #fff;
+	padding: 5px 10px;
+	text-align: center;
+	cursor: pointer;
+}
+.drag-item > .button:hover {
+	color: rgba(0, 0, 0, 0.5);
+	text-decoration: none;
+}
+.drag-item.is-moving {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.drag-header-more {
+  cursor: pointer;
+}
+
+/* Dragula CSS  */
+.gu-mirror {
+  position: fixed !important;
+  margin: 0 !important;
+  z-index: 9999 !important;
+  opacity: 0.8;
+  list-style-type: none;
+}
+
+.gu-hide {
+  display: none !important;
+}
+
+.gu-unselectable {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+}
+
+.gu-transit {
+  opacity: 0.2;
+}
